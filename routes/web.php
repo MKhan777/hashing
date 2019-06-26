@@ -21,3 +21,12 @@ $router->post(
        'uses' => 'AuthController@authenticate'
     ]
 );
+
+$router->get(
+    '/hash', 
+    function() {
+        	//return a random hash of 25 character length
+            return Hash::make(str_random(25));
+        });
+    }
+);
