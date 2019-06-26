@@ -24,6 +24,13 @@ $router->post(
     ]
 );
 
+$router->post(
+    'register', 
+    [
+        'uses' => 'AuthController@create'
+    ]
+);
+
 $router->get(
     'hash', 
     function() {
