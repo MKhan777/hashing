@@ -1,5 +1,7 @@
 <?php
 
+
+use Illuminate\Support\Facades\Hash;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -23,10 +25,24 @@ $router->post(
 );
 
 $router->get(
-    '/hash', 
+    'hash', 
     function() {
         	//return a random hash of 25 character length
             return Hash::make(str_random(25));
+        
+
+});
+
+$router->group(
+    ['middleware' => 'jwt.auth'], 
+    function() use ($router) {
+        $router->get('hash', function() {
+            //return a random hash of 25 character length
+            //after verfiying jwt token
+            $hash = Hash::make(str_random(25));
+            Log::info('Hash Generated :'.$hash);
+            return  $hash;
+           
         });
     }
 );
