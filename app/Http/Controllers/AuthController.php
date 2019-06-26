@@ -69,11 +69,12 @@ class AuthController extends BaseController
                 'token' => $this->jwt($user)
             ], 200);
         }
+
+        //Else Bad Request response
+        return response()->json([
+            'error' => 'Email or password is wrong.'
+        ], 400);
+    }
  
-
-
-
-
-
 
 }
