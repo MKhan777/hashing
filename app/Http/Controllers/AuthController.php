@@ -75,6 +75,26 @@ class AuthController extends BaseController
             'error' => 'Email or password is wrong.'
         ], 400);
     }
+    public function create(Request $request)
+    {	//print_r($request->name,$request->email,$request->password);
+    	//die();
+    	$name = $request->input('name');
+    	$email = $request->input('email');
+        $password = Hash::make($request->input('password'));
+        // print_r($password);
+        // die();
+        $hash_user = User::create([
+            'name' => $name,
+            'email' => $email,
+            'password' => $password
+        ]);
+ 
+        $res['success'] = true;
+        $res['message'] = 'Success register!';
+        $res['data'] = $this->jwt($hash_user);
+        $res['user'] = $hash_user;
+        return response($res, 200);
+    }
  
 
 }
