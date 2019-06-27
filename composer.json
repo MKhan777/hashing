@@ -1,5 +1,5 @@
 {
-    "name": "talha/lumen-jwt",
+    "name": "talha/lumen-jwt-hashing",
     "description": "Random hash generator api.",
     "type": "project",
     "require": {
