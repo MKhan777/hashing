@@ -19,3 +19,11 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+## Project 
+
+This project has following endpoints
+hash(get): hit hash providing token it will log output hash
+login(post): hit login with email and pass and it will return token
+register(post): hit register with name,email and pass and it will return token

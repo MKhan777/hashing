@@ -81,8 +81,6 @@ class AuthController extends BaseController
     	$name = $request->input('name');
     	$email = $request->input('email');
         $password = Hash::make($request->input('password'));
-        // print_r($password);
-        // die();
         $hash_user = User::create([
             'name' => $name,
             'email' => $email,

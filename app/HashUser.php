@@ -2,12 +2,10 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 
-class HashUser extends Authenticatable
-{   
-     use Notifiable;
+class HashUser extends Model
+{
 
     /**
      * The attributes that are mass assignable.
@@ -15,7 +13,7 @@ class HashUser extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','password',
+        'name', 'email','password'
     ];
 
     /**
@@ -24,9 +22,8 @@ class HashUser extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
+        'password'
     ];
 
-    
    
 }
