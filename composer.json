@@ -5,7 +5,7 @@
 
     "require": {
         "php": ">=7.0.33",
-        "alha/lumen-jwt-hashing":"dev-master@dev",
+        "talha/lumen-jwt-hashing":"dev-master@dev",
         "laravel/lumen-framework": "5.5.*",
         "vlucas/phpdotenv": "~2.2",
         "firebase/php-jwt": "^5.0"
