@@ -6,29 +6,38 @@
 
 Please check the official Lumen installation guide for server requirements before you start. [Official Documentation](https://lumen.laravel.com/docs/5.5/installation)
 
+## Download via composer
 
-Clone the repository
+ Run the following command in your CMD :
+		
+		composer create-project talha/lumen-jwt-hashing
+
+
+## Donwload Via Github
+
+
+Clone the repository form Github
 
     git clone git@github.com:MKhan777/hashing.git
 
 Switch to the repo folder
 
-    cd lumen-jwt
+    cd hashing
 
 Install all the dependencies using composer
 
     composer install
 
-Copy the example env file and make the required configuration changes in the .env file
+Copy the example env file (from lumen sample project.The env file is not pre included in the project)and make the required configuration changes in the .env file
 
     cp .env.example .env
 
 Generate a new application key
 
-Since Lumen doesn't have the `php artisan key:generate` command, there's a custom route `http://localhost:8000/appKey` to help you generate an application key.
+Since Lumen doesn't have the `php artisan key:generate` command. You can create it online through any
+website or create it yourself.
 
-Generate a random App key
-Generate a random JWT authentication secret key 
+Generate a random App key. Generate a random JWT authentication secret key 
 
    
 
