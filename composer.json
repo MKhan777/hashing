@@ -30,7 +30,7 @@
             "php -r \"copy('.env.example', '.env');\""
         ]
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "optimize-autoloader": true
 }
