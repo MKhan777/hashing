@@ -2,12 +2,20 @@
     "name": "talha/lumen-jwt-hashing",
     "description": "Random hash generator api.",
     "type": "project",
+
     "require": {
         "php": ">=7.0.33",
+        "alha/lumen-jwt-hashing":"dev-master@dev",
         "laravel/lumen-framework": "5.5.*",
         "vlucas/phpdotenv": "~2.2",
         "firebase/php-jwt": "^5.0"
     },
+    "repositories": [
+  {
+     "type": "vcs",
+     "url": "https://github.com/Mkhan777/hashing" 
+  }
+    ],
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "phpunit/phpunit": "~6.0",
